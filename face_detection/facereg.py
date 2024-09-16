@@ -1,26 +1,36 @@
-from PIL import Image
 import numpy as np
 import face_recognition as fr
-import cv2 
+import cv2 as cv
 
-image_path = "faces/group_photo.jpeg"
-image = fr.load_image_file(image_path)
-face_locations = fr.face_locations(image)
-
-#face count
-count = 1
-
-for face_location in face_locations:
-    print("face_found : ",end="")
-    top, right, bottom, left = face_location
-
-    img = cv2.imread(image_path)
-    img = img[top:bottom, left:right]
-
-    cv2.imwrite(f"faces/face{count}.jpg", img)
-    print(f"face{count} saved")
+class face_recognition():
+    #variable declearation
+    cap = cv.VideoCapture(0)
+    person_name = ""
+    person_face_encodings = []
     
-    cv2.imshow(f"face{count}",img)
+    def __init__(self, person):
+        #extracting person name to be matched
+        self.person_name = person.split("/")[-1]
+        self.person_name = person_name.split(".")[0]
 
-    #count incrementation
-    count += 1
+        #encoding person's face
+        person_face = fr.load_image_file(person)
+        person_face_locations = fr.face_locations(person_face)
+        self.person_face_encodings = fr.face_encodings(person_face,person_face_locations)[0]
+
+    def find_match(self, unknown):
+        #encoding the captured face
+        unknown_face = fr.load_image_file(unknown)
+        unknown_face_locations = fr.face_locations(unknown_face)
+        unknown_face_encodings = fr.face_encodings(unknown_face,unknown_face_locations)[0]
+
+        #comparing the known and the unknown
+        match_status = fr.face_compare([person_face_encodings],unknown_face_encodings)
+
+        if match_status[0] == True:
+            return 1,self.person_name
+        else:
+            return 0,"unknown"
+
+    def recognize(self):
+        pass
