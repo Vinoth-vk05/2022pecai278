@@ -10,4 +10,6 @@ pre requisites to run the project
 8.done !
 
 NOTE! version combination ( dlib-19.19.0 , cmake-3.30.3 , Click-8.1.7 , Pillow-10.4.0 , colorama-0.4.6 , face-recognition-1.3.0 , face-recognition-models-0.3.0 , numpy-1.24.4 )
-then try to import face_recognition and check for any error, if error occurs look to this website https://www.geeksforgeeks.org/how-to-install-face-recognition-in-python-on-windows/
+
+then try to import face_recognition and check for any error, if error occurs look to this website 
+https://www.geeksforgeeks.org/how-to-install-face-recognition-in-python-on-windows/
