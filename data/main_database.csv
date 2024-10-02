@@ -1,4 +1,6 @@
-rollnumber,name,dob,class,regno,gender,image_path,have encodings
-2022pecai278,Vinothkumar S,10-05-2005, 3 c,2.11E+11,male,faces.project1\2022PECAI278.jpg,
-2022pecai282,Yashwanth kumar R,18-10-2004,3 c,2.11E+11,male,faces.project1\2022PECAI282.jpg,
-2022pecai263,Malaram Manjith Naidu,14-09-2004,3 c,2.11E+11,male,faces.project1\2022PECAI263.jpg,
+roll_no,name,dob,class,reg_no,gender,image_path,encodings_status
+2022pecai278,Vinothkumar S,10-05-2005,3-c,211422243357,male,faces/2022PECAI278.jpg,False
+2022pecai282,Yashwanth kumar S,18-10-2004,3-c,211422243357,male,faces/2022PECAI282.jpg,False
+2022pecai263,Malaram Manjith Naidu,14-09-2004,3-c,211422243357,male,faces/2022PECAI263.jpg,False
+2022pecai000,tom cruse,10-10-1111,3-c,211422243000,male,faces/2022pecai000.jpg,False
+2022pecai000,tom cruse,10-10-2000,3-c,21142224300,male,faces/2022pecai000.jpg,False
