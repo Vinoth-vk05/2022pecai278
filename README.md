@@ -13,3 +13,13 @@ NOTE! version combination ( dlib-19.19.0 , cmake-3.30.3 , Click-8.1.7 , Pillow-1
 
 then try to import face_recognition and check for any error, if error occurs look to this website 
 https://www.geeksforgeeks.org/how-to-install-face-recognition-in-python-on-windows/
+
+------------------------------------------------------------ |
+                                                             \/
+flow of how to execute
+If you are very new to execute the program first 
+  1. just run loading.py
+  2. then run the face_recognition_version 1.py
+
+else:
+  run th face_recognition_version 1.py
